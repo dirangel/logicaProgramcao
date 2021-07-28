@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex08</title>
+</head>
+
+<body>
+  <script>
+    //Fazer jogador1 digitar um número
+    //fazer jogador 2 digital outro número
+    //se forem iguais, mostrar mensagem'empate'
+    //sortear um numero entre 0 e 1
+    //se o número sorteado for 0, ganha quem escolher o número menor
+    //se o numero sorteado for 1, ganha quem escolher o número maior
+
+    var jogada1 = parseInt(prompt("Jogador 1: Digite um número"))
+    var jogada2 = parseInt(prompt("Jogador 2: Digite um número"))
+
+
+    var sorteio = parseInt(Math.random() * 2)
+    console.log(sorteio)
+
+
+    if (sorteio == 0 && jogada1 > jogada2) {
+      alert("Jogado 2 venceu" + " numero sorteado: " + sorteio + " | Jogada1: " + jogada1 + " | jogada2: " + jogada2);
+    } else if (sorteio == 0 && jogada1 < jogada2) {
+      alert("Jogado 1 venceu" + " numero sorteado: " + sorteio + " | Jogada1: " + jogada1 + " | jogada2: " + jogada2);
+    }
+    if (sorteio == 1 && sorteio == 1) {
+      alert("Jogado 2 venceu" + " numero sorteado: " + sorteio + " | Jogada1: " + jogada1 + " | jogada2: " + jogada2);
+    } else if (sorteio == 1 && jogada1 > jogada2) {
+      alert("Jogado 1 venceu" + " numero sorteado: " + sorteio + " | Jogada1: " + jogada1 + " | Jogada2: " + jogada2);
+    } else if (jogada1 == jogada2) {
+      alert(jogada1 + " e " + jogada2 + " Empate! ")
+    }
+
+
+  </script>
+</body>
+
+</html>

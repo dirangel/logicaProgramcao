@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex05</title>
+</head>
+
+<body>
+  <script>
+    //perdi prar o usuário digital dois números
+    //converter para inteiro
+    /*
+    Mostrar um alert com o texto: O resto da divisão de (n1) por (n2) é:(resultado)
+    Mostrar um alert com o texto: O número (n1) elavado a (n2) é: (resultado)
+    */
+
+    var n1 = prompt("Informe o primeiro número:")
+    var n2 = prompt("Informe o segundo número:")
+
+    n1 = parseInt(n1);
+    n2 = parseInt(n2);
+
+    resto = n1 % n2;
+    elavado = n1 ** n2;
+
+
+
+    alert("O resto da divisão de " + n1 + " por " + n2 + " é: " + resto);
+    alert("O número " + n1 + " elevado a " + n2 + " é: " + elavado);
+
+  </script>
+</body>
+
+</html>

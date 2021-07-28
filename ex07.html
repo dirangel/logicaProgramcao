@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex07</title>
+</head>
+
+<body>
+  <script>
+    //Pedir pra o usuário digitar dois números e mostrar uma mensagem 
+    //informando se foi aprovado ou não... A nota de corte é 5. 
+
+    nota1 = parseFloat(prompt("Informe a primeira nota: "));
+    nota2 = parseFloat(prompt("Informe a segunda nota: "))
+
+    media = (nota1 + nota2) / 2
+    if (media > 5) {
+      alert(media + " Parabéns, aprovado!")
+    } else {
+      alert(media + " Reprovado!")
+    }
+
+  </script>
+</body>
+
+</html>

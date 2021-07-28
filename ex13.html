@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex13</title>
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+
+    }
+
+    .corpo {
+      margin-top: 30px;
+      margin-left: 100px;
+      margin-right: 100px;
+      border: 10px;
+      background-color: black;
+      color: white;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<h1>Tabuada</h1>
+
+<button onclick="mostrarTabuada()">Criar Tabuada</button>
+<button onclick="limparTabuada()">Limpar Tabuada</button>
+<div class="corpo">
+  <div id="output"></div>
+</div>
+
+<body>
+  <script>
+    //Pedir para o usuário digitar um número.
+    //mostrar a tabuada desse numero de 1 a 20
+    //deve ter a possibilidade do usuário digitar  
+    //outro número e também de limpar a tabuada gerando previamente
+    var output = document.querySelector("#output")
+
+    var mensagem = ''
+    output.innerHTML = mensagem
+
+
+    function mostrarTabuada() {
+      //perguntar o número para o usuário,converter o número
+      var n = parseFloat(prompt("Informe o número: "))
+      limparTabuada();
+      //criar uma variavel que vai servira de indice.
+      var i = 1;
+      while (i <= 20) {
+        //mensagem +=
+        mensagem = mensagem + n + 'x' + i + '=' + (n * i) + '<br>'
+        // i++;
+        i = i + 1;
+      }
+
+      output.innerHTML = mensagem
+    }
+
+
+    function limparTabuada() {
+      mensagem = '';
+      output.innerHTML = mensagem;
+
+    }
+
+
+  </script>
+</body>
+
+</html>

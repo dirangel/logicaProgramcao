@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex11</title>
+</head>
+
+<body>
+  <script>
+    //Pedir para o usuário digitar um número e mostrar a tabuada desse número de 1 a 1000
+    var numero = parseInt(prompt("Informe o número a ser realizado a tabuada"))
+
+    for (var i = 1; i <= 1000; i++) {
+      var valor = numero * i;
+      document.write(numero + ' X ' + i + ' = ' + valor + '<br>')
+      //colocar barra apos 10 numeros
+      if (i % 10 === 0) {
+        document.write('<hr>')
+      }
+    }
+  </script>
+</body>
+
+</html>

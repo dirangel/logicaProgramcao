@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex14</title>
+  <style>
+    .corpo {
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .btnOp {
+      padding: 10px;
+      width: 100px;
+      margin: 10px;
+      font-size: 1.5rem;
+    }
+
+    #resultado {
+      margin: 2rem;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="corpo">
+    <h1>Calculadora</h1>
+    <button class="btnOp" onclick="operador('+')"> + </button>
+    <button class="btnOp" onclick="operador('-')"> - </button>
+    <button class="btnOp" onclick="operador('/')"> / </button>
+    <button class="btnOp" onclick="operador('*')"> * </button>
+    <div id="resultado">0</div>
+  </div>
+
+
+  <script>
+
+    function mostrar(valor) {
+      document.querySelector("#resultado").innerHTML = valor;
+    }
+
+
+
+    var n1 = parseInt(prompt("Informe o primeiro número da operação"))
+    var n2 = parseInt(prompt("Informe o segundo número da operação"))
+
+    num1 = n1;
+    num2 = n2;
+
+    console.log("num1: ", num1)
+    console.log("num2: ", num2)
+
+
+    // switch (operador) {
+    //   case '+':
+    //     console.log('teste');
+    //     break;
+    //   default:
+    //     console.log('Error');
+    // }
+
+  </script>
+</body>
+
+</html>

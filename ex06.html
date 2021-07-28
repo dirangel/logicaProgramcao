@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex06</title>
+</head>
+
+<body>
+  <script>
+    //Pedir para o usuário digitar dois números e mostrar um boolean
+    //indicando se a média for maior que 5.
+    var n1 = prompt("Informe o primeiro número:")
+    var n2 = prompt("Informe o segundo número:")
+
+
+    n1 = parseFloat(n1);
+    n2 = parseFloat(n2);
+
+    var media = (n1 + n2) / 2;
+
+    if (media > 5) {
+      alert(true + " Média: " + media)
+    } else {
+      alert(false + " Média: " + media)
+    }
+
+  </script>
+</body>
+
+</html>

@@ -30,39 +30,45 @@
 
   <div class="corpo">
     <h1>Calculadora</h1>
-    <button class="btnOp" onclick="operador('+')"> + </button>
-    <button class="btnOp" onclick="operador('-')"> - </button>
-    <button class="btnOp" onclick="operador('/')"> / </button>
-    <button class="btnOp" onclick="operador('*')"> * </button>
-    <div id="resultado">0</div>
+    <button class="btnOp" onclick="somar()"> + </button>
+    <button class="btnOp" onclick="subtrair()"> - </button>
+    <button class="btnOp" onclick="dividir()"> / </button>
+    <button class="btnOp" onclick="multiplicar()"> * </button>
+    <div id="output">0</div>
   </div>
 
 
   <script>
+    var n1 = parseInt(prompt("Informe um número"))
 
-    function mostrar(valor) {
-      document.querySelector("#resultado").innerHTML = valor;
+    escreve();
+
+    function escreve() {
+      var output = document.querySelector("#output")
+      output.innerHTML = n1
     }
 
 
-
-    var n1 = parseInt(prompt("Informe o primeiro número da operação"))
-    var n2 = parseInt(prompt("Informe o segundo número da operação"))
-
-    num1 = n1;
-    num2 = n2;
-
-    console.log("num1: ", num1)
-    console.log("num2: ", num2)
-
-
-    // switch (operador) {
-    //   case '+':
-    //     console.log('teste');
-    //     break;
-    //   default:
-    //     console.log('Error');
-    // }
+    function somar() {
+      var n2 = parseFloat(prompt("Digite outro número!"))
+      n1 = n1 + n2
+      escreve()
+    }
+    function subtrair() {
+      var n2 = parseFloat(prompt("Digite outro número!"))
+      n1 = n1 - n2
+      escreve()
+    }
+    function dividir() {
+      var n2 = parseFloat(prompt("Digite outro número!"))
+      n1 = n1 / n2
+      escreve()
+    }
+    function multiplicar() {
+      var n2 = parseFloat(prompt("Digite outro número!"))
+      n1 = n1 * n2
+      escreve()
+    }
 
   </script>
 </body>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex15</title>
+
+  <style>
+    body {
+      text-align: center;
+
+    }
+
+    #btnArea {
+      padding: 10px;
+      margin-top: 2rem;
+      width: 150px;
+      height: 150px;
+    }
+
+    .container {
+      display: grid;
+      height: 600px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #valor {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+  </style>
+
+  <script>
+    //Pedir para o usuário digitar dois números que representam os lados de um retângulo assim que a página é carregada.
+    //Mostrar na tela a área total quando clicar num botão.
+    var largura = parseInt(prompt("Informe a largura do retângulo: "));
+    var altura = parseInt(prompt("Informe a altura do retângulo: "));
+
+
+
+    function mostrarArea() {
+      var area = largura * altura
+      var valor = document.querySelector("#valor");
+      valor.innerHTML = area;
+    }
+
+
+
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <button id="btnArea" onclick="mostrarArea()">Área total</button>
+      <div id="valor">0</div>
+    </div>
+  </div>
+
+</body>
+
+</html>

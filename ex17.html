@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex17</title>
+
+  <style>
+    body {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .container {
+      display: flex;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      padding: 50px;
+    }
+
+    div {
+      margin-top: 15px;
+      display: grid;
+
+    }
+
+    button {
+      margin: 5px;
+      height: 60px;
+      width: 210px;
+      background: black;
+      color: aqua;
+      text-transform: uppercase;
+    }
+  </style>
+
+  <script>
+    //Pedir para o usuário digitar dois números que representam os lados de um
+    //retângulo. Mostrar na tela a área total de duas formas distintas: Num alert 
+    //ou na div#output (dependendo do botão clicado). Esse código não precisa 
+    //ser executado quando a página é aberta.
+
+
+
+
+    function mostrarAlert() {
+      var largura = parseFloat(prompt("Informe a largura"));
+      var altura = parseFloat(prompt("Informe a altura"));
+
+      area = (largura * altura);
+      alert("Área do retangulo: " + area);
+
+    }
+
+    function mostrarDiv() {
+      var largura = parseFloat(prompt("Informe a largura"));
+      var altura = parseFloat(prompt("Informe a altura"));
+
+      var escreve = document.querySelector("#output");
+
+      area = (largura * altura);
+
+      escreve.innerHTML = area;
+
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <div><button id="output" onclick="mostrarDiv()">Mostrar aqui</button></div>
+    </div>
+    <div>
+      <div><button onclick="mostrarAlert()">Mostrar no alert</button></div>
+    </div>
+  </div>
+</body>
+
+</html>

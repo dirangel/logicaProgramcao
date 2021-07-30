@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex16</title>
+
+  <style>
+    .corpo {
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .btnOp {
+      padding: 10px;
+      width: 100px;
+      margin: 10px;
+      font-size: 1.5rem;
+    }
+
+    #resultado {
+      margin: 2rem;
+      font-size: 2rem;
+    }
+  </style>
+
+  <script>
+
+    var num1 = parseFloat(prompt("Informe o primeiro número"));
+
+
+    function calcular(op) {
+      var num2 = parseFloat(prompt("Informe o segundo número"));
+
+      switch (op) {
+        case '+':
+          num1 = num1 + num2;
+          escrever()
+          break;
+        case '-':
+          num1 = num1 - num2;
+          escrever()
+          break;
+        case '*':
+          num1 = num1 * num2;
+          escrever()
+          break;
+        case '/':
+          num1 = num1 / num2;
+          escrever()
+          break;
+        default:
+          alert("OPeração invalida")
+      }
+    }
+
+
+    function escrever() {
+      var escreve = document.querySelector("#output");
+      escreve.innerHTML = num1;
+    }
+
+
+
+
+  </script>
+
+
+
+</head>
+
+<body>
+
+  <div class="corpo">
+    <h1>Calculadora</h1>
+    <button class="btnOp" onclick="calcular('+')"> + </button>
+    <button class="btnOp" onclick="calcular('-')"> - </button>
+    <button class="btnOp" onclick="calcular('*')"> / </button>
+    <button class="btnOp" onclick="calcular('/')"> * </button>
+    <div id="output">0</div>
+  </div>
+
+</body>
+
+</html>

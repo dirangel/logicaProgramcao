@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex20</title>
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .container {
+      padding-top: 200px;
+      font-size: 2rem;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <label id="array"></label>
+    <label>Somatoria dos números pares</label>
+    <div id="somatoria"></div>
+  </div>
+
+
+  <script>
+    var arr = new Array(25, 30, 45, 28, 0, 12, 78, 64);
+    var soma = 0;
+
+    for (var i = 0; i < arr.length; i++) {
+      // console.log("Posição: ", i)
+      // var valor = arr[i]
+      // console.log("valor da posição: ", valor)
+      // resto = arr[i] % 2;
+      // console.log("resto: ", resto)
+
+      if (arr[i] % 2 === 0) {
+        // console.log("arr: ", arr[i])
+        var armazena = arr[i];
+        var soma = soma + armazena;
+      }
+
+    }
+    console.log("Soma: ", soma)
+
+    var valor = document.querySelector("#somatoria");
+    valor.innerHTML = soma
+
+
+    var vetor = document.querySelector("#array");
+    vetor.innerHTML = arr;
+
+  </script>
+</body>
+
+</html>

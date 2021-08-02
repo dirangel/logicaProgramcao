@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex18</title>
+
+  <style>
+    .corpo {
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .btnOp {
+      padding: 10px;
+      width: 100px;
+      margin: 10px;
+      font-size: 1.5rem;
+    }
+
+    #resultado {
+      margin: 2rem;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="corpo">
+    <h1>Calculadora</h1>
+    <button class="btnOp" onclick="iniciarCalculo('+')"> + </button>
+    <button class="btnOp" onclick="iniciarCalculo('-')"> - </button>
+    <button class="btnOp" onclick="iniciarCalculo('/')"> / </button>
+    <button class="btnOp" onclick="iniciarCalculo('*')"> * </button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    var n2 = parseFloat(prompt("Informe o primeiro número"));
+    console.log("Primeiro número: ", n2);
+
+    escreve(n2);
+
+    function iniciarCalculo(simbolo) {
+      var n1 = document.querySelector("#output").textContent;
+      n1 = parseFloat(n1)
+      console.log("peguei o que estava dentro da div: n1 ", n1);
+      console.log("Simbolo: ", simbolo);
+
+      var n2 = parseFloat(prompt('Digite o segundo número'));
+      console.log("Segundo número: ", n2)
+
+      try {
+        var msg = calcular(simbolo, n1, n2);
+      } catch (e) {
+        alert(e);
+        return;
+      }
+
+      escreve(msg)
+
+    }
+
+    function escreve(mensagem) {
+      var output = document.querySelector('#output');
+      output.textContent = mensagem;
+    }
+
+    function calcular(simbolo, n1, n2) {
+      if (simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/') {
+        alert('digite um simbolo valido')
+        return 0;
+      }
+
+      if (isNaN(n1) || isNaN(n2)) {
+        alert('Digite somente numeros')
+        return 0;
+      }
+
+      var numeroCalculado = null;
+
+      switch (simbolo) {
+        case '+':
+          numeroCalculado = n1 + n2;
+          break;
+        case '-':
+          numeroCalculado = n1 - n2;
+          break;
+        case '*':
+          numeroCalculado = n1 * n2;
+          break;
+        case '/':
+          numeroCalculado = n1 / n2;
+      }
+
+      return numeroCalculado;
+
+    }
+  </script>
+</body>
+
+</html>

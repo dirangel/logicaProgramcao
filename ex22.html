@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex22</title>
+</head>
+
+<body>
+  <div id="output"></div>
+
+  <script>
+    //Mostrar na tela todos os dados de um produto específico, contendo quantidade
+    //em estoque e preço. Estes dados estarão agrupados em um objeto.
+
+    const produtos = new Object()
+
+
+
+    produtos.comprou = function (qtd) {
+      if (!qtd) {
+        qtd = 1;
+      }
+      console.log("Comprou produto!")
+      this.estoque = this.estoque - qtd
+      console.log(this.estoque)
+
+    }
+
+    produtos.nome = "caneta";
+    produtos.preco = 1.20;
+    produtos.estoque = 10
+    var msg = '';
+
+    msg += "nome: " + produtos.nome + '<br>'
+    msg += "preço: " + produtos.preco + '<br>'
+    msg += "estoque: " + produtos.estoque + '<br>'
+
+    document.querySelector("#output").innerHTML = msg;
+  </script>
+</body>
+
+</html>

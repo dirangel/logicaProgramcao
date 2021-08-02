@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex23</title>
+</head>
+
+<body>
+  <div id="output"></div>
+
+  <script>
+    //sintaxe literal
+    // const prod = {
+    //   "nome": "caneta",
+    //   "preco": 1.1,
+    // }
+
+    // const produtos = [prod, { "nome": "lapis", "preco": 2 }]
+
+    // document.querySelector("#output").innerHTML = produtos[1].nome
+
+    //mostrar na tela os dados de produtos,
+    //contendo quantidade em estoque e preço. 
+    //Estes dados estarão agrupados
+    //em um array de objetos.
+
+    const listaMaterial = [
+      {
+        "nome": "caneta",
+        "preco": 1.1,
+        "estoque": 10,
+      },
+      {
+        "nome": "papel",
+        "preco": 2.50,
+        "estoque": 10,
+      },
+      {
+        "nome": "borracha",
+        "preco": 2.20,
+        "estoque": 10,
+      },
+      {
+        "nome": "apontador",
+        "preco": 3.40,
+        "estoque": 10,
+      }
+    ]
+
+
+    var msg = ''
+    for (var i = 0; i < listaMaterial.length; i++) {
+      msg += 'Nome: ' + listaMaterial[i].nome + '<br>';
+      msg += 'Preço: ' + listaMaterial[i].preco + '<br>';
+      msg += 'Estoque: ' + listaMaterial[i].estoque + '<br>';
+    }
+
+
+
+    document.querySelector("#output").innerHTML = msg;
+
+
+  </script>
+</body>
+
+</html>

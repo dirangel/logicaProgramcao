@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex24</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding: 20px;
+    }
+
+    .btnSalvar {
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    const idade = parseInt(document.querySelector("#idade"));
+
+    function salvar() {
+      const output = document.querySelector("#output")
+      const nome = document.getElementById("nome");
+      const idade = document.getElementById("idade");
+
+      output.innerHTML = nome.value + " " + idade.value;
+
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="corpo">
+    <label>informe o nome:</label>
+    <br>
+    <input type="text" placeholder="nome completo" id="nome">
+    <br>
+    <label>informe sua idade:</label>
+    <br>
+    <input type="number" placeholder="idade" id="idade">
+  </div>
+  <button class="btnSalvar" onclick="salvar()">Salvar</button>
+  <div id="output"></div>
+</body>
+
+</html>

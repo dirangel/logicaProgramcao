@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex32</title>
+  <script>
+    //Manipulando Arrays.
+    let tecnicas = ["hmtl", "css", "javascript", "react"]
+
+    //adicionar um item no fim.
+    tecnicas.push("nodejs");
+    //adicionar no começo.
+    tecnicas.unshift("sql");
+    //removerdo fim.
+    // tecnicas.pop();
+    //removerdo começo.
+    // tecnicas.shift();
+    //pegar somente alguns elementos do array.
+    //o met slice recebe dois argum. posição inicio e fim
+    // console.log(tecnicas.slice(0, 2))
+    //remover 1 ou mais items em qualquer posição do array.
+    // tecnicas.splice(1, 1);
+    // console.log(tecnicas)
+    //encontrar a posição de um elemento do array.
+    let index = tecnicas.indexOf('react')
+    console.log(tecnicas)
+    console.log("Posição escolhida: ", index)
+  </script>
+</head>
+
+<body>
+  <h1>Rocketseat</h1>
+</body>
+
+</html>

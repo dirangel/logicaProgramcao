@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex30</title>
+  <script>
+    //Contar elementos de um array
+    //Posso passar varios tipos de elementos para um array
+    console.log([
+      "a",
+      { type: "array" },
+      function () { return "alo" },
+    ]);
+    //Posso contar com o length
+    console.log([
+      "a",
+      { type: "array" },
+      function () { return "alo" },
+    ].length);
+    //Posso executar a posição desejada
+    console.log([
+      "a",
+      { type: "array" },
+      function () { return "alo" },
+    ][2]());
+
+  </script>
+</head>
+
+<body>
+  <h1>Rocketseat</h1>
+</body>
+
+</html>
